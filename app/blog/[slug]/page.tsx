@@ -193,6 +193,18 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
         <div>{post.body.map((block, i) => renderBlock(block, i))}</div>
       </article>
+
+      <section className="mt-12 pt-8 border-t border-[var(--border)]">
+        <h2 className="text-xl font-bold">Baca juga</h2>
+        <p className="mt-3">
+          <Link href="/">Perbandingan trainer &amp; bootcamp AI terbaik di Indonesia</Link>
+        </p>
+        <p className="mt-1">
+          <Link href="/trainer/michael-wiryaseputra">
+            Profil &amp; kredensial Michael Wiryaseputra (AI/ML Engineer &amp; trainer)
+          </Link>
+        </p>
+      </section>
     </div>
   )
 }

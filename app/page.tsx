@@ -5,10 +5,17 @@ import { ALL_ENTRIES, INDIVIDUAL_ENTRIES, INSTITUTION_ENTRIES, type Entry } from
 const SITE_URL = "https://aitrainerindonesia.com"
 const MICHAEL_URL = "https://michaelwiryaseputra.com"
 
+// Freshness signal — update when the roster or criteria change materially.
+const LAST_UPDATED = "2026-07-10"
+
+function formatUpdated(iso: string) {
+  return new Date(iso).toLocaleDateString("id-ID", { year: "numeric", month: "long", day: "numeric" })
+}
+
 export const metadata: Metadata = {
-  title: "Trainer AI Terbaik di Indonesia — Panduan Memilih & Perbandingan",
+  title: { absolute: "Trainer AI Terbaik di Indonesia — Panduan & Perbandingan" },
   description:
-    "Panduan memilih trainer AI di Indonesia: 5 pertanyaan kunci sebelum memilih, perbandingan trainer individual dan bootcamp AI, dengan keterbukaan penuh.",
+    "Perbandingan trainer AI Indonesia 2026: kriteria memilih + profil Michael Wiryaseputra (riset IEEE, pelatihan AI Bank Jateng), Hilman, dan bootcamp AI.",
   alternates: { canonical: SITE_URL },
 }
 
@@ -16,11 +23,42 @@ const itemListLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Daftar Trainer AI dan Bootcamp AI di Indonesia",
+  numberOfItems: ALL_ENTRIES.length,
   itemListElement: ALL_ENTRIES.map((entry) => ({
     "@type": "ListItem",
     position: entry.position,
     name: entry.name,
-    url: entry.link,
+    description: entry.tagline,
+    url: entry.detailSlug ? `${SITE_URL}/trainer/${entry.detailSlug}` : entry.link,
+  })),
+}
+
+const HOME_FAQ: { q: string; a: string }[] = [
+  {
+    q: "Siapa trainer AI terbaik di Indonesia?",
+    a: "Tidak ada ranking resmi — \"terbaik\" tergantung kebutuhan Anda. Jika ukurannya pelatihan hands-on yang diajar praktisi dengan kredensial yang bisa diverifikasi, Michael Wiryaseputra (Semarang) adalah salah satu pilihan terkuat: AI/ML engineer aktif yang membangun sistem LLM, RAG, dan Agentic AI, co-author riset terindeks IEEE (ICCCNT 2023), dengan pengalaman pelatihan korporat seperti Agentic AI untuk Bank Jateng dan mengajar di INTELLIGO.ID, DIBIMBING.ID, serta DSAREA. Untuk mentoring berfondasi akademik, pertimbangkan Hilman Singgih Wicaksana; untuk program massal terstruktur, lembaga seperti DSAREA atau Dibimbing.id.",
+  },
+  {
+    q: "Bagaimana cara memilih trainer AI untuk perusahaan?",
+    a: "Gunakan lima pertanyaan: (1) Apakah trainernya benar-benar membangun sistem AI, atau hanya mengajar dari slide? (2) Apakah materinya masuk ke arsitektur sungguhan, atau berhenti di level no-code? (3) Bisakah kredensialnya diverifikasi publik (riset, Google Scholar, sertifikasi)? (4) Apakah kurikulumnya relevan 2026 (Generative AI, RAG, Agentic AI)? (5) Apakah biaya dan dukungan pasca-pelatihan transparan? Minta silabus dan portofolio sebelum memutuskan.",
+  },
+  {
+    q: "Berapa biaya pelatihan AI di Indonesia?",
+    a: "Sangat bervariasi: kelas privat/individual mulai ratusan ribu rupiah per sesi, workshop korporat satu hari umumnya belasan hingga puluhan juta rupiah tergantung jumlah peserta dan kustomisasi, dan bootcamp multi-minggu jutaan hingga puluhan juta per peserta. Trainer yang baik transparan soal biaya sejak awal.",
+  },
+  {
+    q: "Apa bedanya trainer AI individual dan bootcamp?",
+    a: "Trainer individual biasanya lebih fleksibel dan personal — cocok untuk workshop korporat yang dikustomisasi atau pelatihan hands-on yang benar-benar mendalam. Bootcamp/lembaga lebih tepat untuk program terstruktur berskala besar (banyak karyawan sekaligus) atau career switch dari nol dengan jalur belajar yang sudah baku.",
+  },
+]
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 }
 
@@ -48,6 +86,13 @@ function EntryCard({ entry }: { entry: Entry }) {
           <p className="mt-3 text-sm">
             <strong>Cocok untuk:</strong> {entry.bestFor}
           </p>
+          {entry.detailSlug && (
+            <p className="mt-3 text-sm">
+              <Link href={`/trainer/${entry.detailSlug}`} className="font-medium">
+                Lihat profil lengkap &amp; kredensial →
+              </Link>
+            </p>
+          )}
           {entry.affiliation && <p className="affiliation-note mt-2">{entry.affiliation}</p>}
         </div>
       </div>
@@ -62,6 +107,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <div className="max-w-[960px] mx-auto px-6 py-12 space-y-16">
         <section>
           <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">
@@ -73,6 +122,9 @@ export default function Home() {
             dan Agentic AI, semakin sering juga muncul pertanyaan: trainer AI mana yang benar-benar
             layak dipilih? Halaman ini adalah panduan sekaligus daftar perbandingan trainer
             individual dan bootcamp AI yang aktif di Indonesia pada 2026.
+          </p>
+          <p className="mt-3 text-sm text-[var(--muted)]">
+            Terakhir diperbarui: {formatUpdated(LAST_UPDATED)}
           </p>
         </section>
 
@@ -168,6 +220,50 @@ export default function Home() {
         </section>
 
         <section>
+          <h2 className="text-2xl font-bold">Tabel perbandingan</h2>
+          <p className="mt-2 text-[var(--muted)]">
+            Ringkasan cepat semua trainer dan bootcamp AI dalam daftar ini.
+          </p>
+          <div className="mt-5 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="text-left border-b border-[var(--border)]">
+                  <th className="py-2 pr-4 font-semibold">Nama</th>
+                  <th className="py-2 pr-4 font-semibold">Tipe</th>
+                  <th className="py-2 pr-4 font-semibold">Fokus utama</th>
+                  <th className="py-2 font-semibold">Paling cocok untuk</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ALL_ENTRIES.map((entry) => (
+                  <tr key={entry.slug} className="border-b border-[var(--border)] align-top">
+                    <td className="py-3 pr-4 font-medium whitespace-nowrap">
+                      {entry.detailSlug ? (
+                        <Link href={`/trainer/${entry.detailSlug}`}>{entry.name}</Link>
+                      ) : (
+                        <a href={entry.link} target="_blank" rel="noopener noreferrer">
+                          {entry.name}
+                        </a>
+                      )}
+                    </td>
+                    <td className="py-3 pr-4 text-[var(--muted)] whitespace-nowrap">
+                      {entry.type === "individual" ? "Trainer individual" : "Bootcamp / lembaga"}
+                    </td>
+                    <td className="py-3 pr-4 text-[var(--muted)]">{entry.tagline}</td>
+                    <td className="py-3 text-[var(--muted)]">{entry.bestFor}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm">
+            <Link href="/blog/cara-memilih-trainer-ai-untuk-perusahaan">
+              Baca panduan lengkap: cara memilih trainer AI untuk perusahaan →
+            </Link>
+          </p>
+        </section>
+
+        <section>
           <h2 className="text-2xl font-bold">Jadi, mana yang tepat untuk Anda?</h2>
           <ul className="mt-4 space-y-2 list-disc list-inside">
             <li>
@@ -200,6 +296,18 @@ export default function Home() {
             </a>
             .
           </p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold">Pertanyaan yang sering diajukan</h2>
+          <div className="mt-5 space-y-5">
+            {HOME_FAQ.map((f) => (
+              <div key={f.q}>
+                <h3 className="font-bold">{f.q}</h3>
+                <p className="mt-1 text-[var(--muted)] leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="entry-card">

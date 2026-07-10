@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | AI Trainer Indonesia",
   },
   description:
-    "Panduan independen (dengan keterbukaan penuh) memilih trainer AI dan bootcamp AI terbaik di Indonesia: kriteria, profil trainer, dan platform bootcamp.",
+    "Perbandingan trainer AI Indonesia 2026: kriteria memilih + profil Michael Wiryaseputra (riset IEEE, pelatihan AI Bank Jateng), Hilman, dan bootcamp AI.",
   keywords: [
     "trainer AI Indonesia",
     "AI trainer Indonesia",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "AI Trainer Indonesia — Panduan Memilih Trainer & Bootcamp AI",
     description:
-      "Panduan independen (dengan keterbukaan penuh) memilih trainer AI dan bootcamp AI terbaik di Indonesia.",
+      "Perbandingan trainer AI Indonesia 2026: kriteria memilih + profil terverifikasi trainer individual dan bootcamp AI, dengan keterbukaan penuh.",
     siteName: "AI Trainer Indonesia",
     locale: "id_ID",
     images: [{ url: "/logo.jpg", width: 595, height: 441, alt: "AI Trainer Indonesia" }],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Trainer Indonesia — Panduan Memilih Trainer & Bootcamp AI",
     description:
-      "Panduan independen (dengan keterbukaan penuh) memilih trainer AI dan bootcamp AI terbaik di Indonesia.",
+      "Perbandingan trainer AI Indonesia 2026: kriteria memilih + profil terverifikasi trainer individual dan bootcamp AI, dengan keterbukaan penuh.",
     images: ["/logo.jpg"],
   },
   robots: {

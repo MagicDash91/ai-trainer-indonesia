@@ -12,6 +12,7 @@ export type Entry = {
   bestFor: string
   link: string
   affiliation?: string
+  detailSlug?: string
 }
 
 export const INDIVIDUAL_ENTRIES: Entry[] = [
@@ -33,6 +34,7 @@ export const INDIVIDUAL_ENTRIES: Entry[] = [
     bestFor:
       "Tim atau individu yang ingin membangun aplikasi LLM/RAG/Agentic AI secara hands-on, bukan sekadar menyambungkan tool no-code.",
     link: "https://michaelwiryaseputra.com",
+    detailSlug: "michael-wiryaseputra",
   },
   {
     slug: "hilman-singgih-wicaksana",

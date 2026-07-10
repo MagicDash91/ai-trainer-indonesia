@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { getAllPosts } from "@/lib/posts"
+import { getAllTrainerSlugs } from "@/lib/trainer-detail"
 
 const SITE_URL = "https://aitrainerindonesia.com"
 
@@ -9,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }))
+
+  const trainers = getAllTrainerSlugs().map((slug) => ({
+    url: `${SITE_URL}/trainer/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
   }))
 
   return [
@@ -30,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...trainers,
     ...posts,
   ]
 }
