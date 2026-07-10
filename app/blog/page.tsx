@@ -2,7 +2,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { getAllPosts } from "@/lib/posts"
 
-const SITE_URL = "https://aitrainerindonesia.com"
+const SITE_URL = "https://aitrainerindonesia.id"
 
 export const metadata: Metadata = {
   title: "Blog",

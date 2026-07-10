@@ -6,7 +6,7 @@ const nextConfig = {
       {
         source: "/:path*",
         has: [{ type: "host", value: ".*\\.vercel\\.app" }],
-        destination: "https://aitrainerindonesia.com/:path*",
+        destination: "https://aitrainerindonesia.id/:path*",
         permanent: true,
       },
     ];

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getAllTrainerSlugs, getTrainerDetail } from "@/lib/trainer-detail"
 
-const SITE_URL = "https://aitrainerindonesia.com"
+const SITE_URL = "https://aitrainerindonesia.id"
 
 export function generateStaticParams() {
   return getAllTrainerSlugs().map((slug) => ({ slug }))

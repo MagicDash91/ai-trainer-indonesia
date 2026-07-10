@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Tentang & Metodologi",
   description:
     "Siapa yang mengelola AI Trainer Indonesia, bagaimana daftar disusun, dan kriteria lengkap yang dipakai untuk menilai trainer dan bootcamp AI.",
-  alternates: { canonical: "https://aitrainerindonesia.com/tentang" },
+  alternates: { canonical: "https://aitrainerindonesia.id/tentang" },
 }
 
 export default function Tentang() {

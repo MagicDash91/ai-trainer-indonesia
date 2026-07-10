@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { getAllPosts } from "@/lib/posts"
 import { getAllTrainerSlugs } from "@/lib/trainer-detail"
 
-const SITE_URL = "https://aitrainerindonesia.com"
+const SITE_URL = "https://aitrainerindonesia.id"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts().map((post) => ({

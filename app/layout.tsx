@@ -6,7 +6,7 @@ import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
-const SITE_URL = "https://aitrainerindonesia.com"
+const SITE_URL = "https://aitrainerindonesia.id"
 const MICHAEL_URL = "https://michaelwiryaseputra.com"
 
 export const metadata: Metadata = {

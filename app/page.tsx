@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ALL_ENTRIES, INDIVIDUAL_ENTRIES, INSTITUTION_ENTRIES, type Entry } from "@/lib/entries"
 
-const SITE_URL = "https://aitrainerindonesia.com"
+const SITE_URL = "https://aitrainerindonesia.id"
 const MICHAEL_URL = "https://michaelwiryaseputra.com"
 
 // Freshness signal — update when the roster or criteria change materially.

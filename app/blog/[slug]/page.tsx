@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getAllPosts, getPost, type Block } from "@/lib/posts"
 
-const SITE_URL = "https://aitrainerindonesia.com"
+const SITE_URL = "https://aitrainerindonesia.id"
 const MICHAEL_URL = "https://michaelwiryaseputra.com"
 
 export function generateStaticParams() {
