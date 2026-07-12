@@ -261,6 +261,11 @@ export default function Home() {
               Baca panduan lengkap: cara memilih trainer AI untuk perusahaan →
             </Link>
           </p>
+          <p className="mt-1 text-sm">
+            <Link href="/pelatihan">Lihat program pelatihan AI (Agentic AI, RAG, LLMOps)</Link>
+            {" · "}
+            <Link href="/semarang">Trainer AI di Semarang &amp; Jawa Tengah</Link>
+          </p>
         </section>
 
         <section>

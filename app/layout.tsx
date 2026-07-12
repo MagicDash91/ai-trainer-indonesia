@@ -119,6 +119,7 @@ export default function RootLayout({
             </Link>
             <nav className="site-nav">
               <Link href="/">Beranda</Link>
+              <Link href="/pelatihan">Pelatihan</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/tentang">Tentang &amp; Metodologi</Link>
             </nav>

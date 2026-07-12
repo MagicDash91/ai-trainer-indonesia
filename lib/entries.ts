@@ -118,6 +118,38 @@ export const INSTITUTION_ENTRIES: Entry[] = [
     link: "https://dibimbing.id",
     affiliation: "Michael Wiryaseputra adalah salah satu tutor bootcamp AI/ML di platform ini.",
   },
+  {
+    slug: "indonesia-ai",
+    name: "Indonesia AI",
+    type: "institution",
+    position: 7,
+    tagline: "Edukasi & konsultasi AI untuk individu dan korporat",
+    description:
+      "Penyedia edukasi dan konsultasi AI di Indonesia dengan bootcamp Machine Learning, Computer Vision, dan NLP, serta AI Corporate Training dan layanan konsultasi untuk sektor keuangan, kesehatan, dan manufaktur. Bermitra dengan penyedia teknologi besar seperti AWS, Microsoft, dan IBM.",
+    strengths: [
+      "Menyediakan jalur individual (bootcamp intensif) sekaligus corporate training + konsultasi",
+      "Kemitraan dengan AWS, Microsoft, dan IBM",
+    ],
+    bestFor:
+      "Individu yang ingin bootcamp AI intensif berbasis proyek, atau perusahaan yang butuh corporate training + konsultasi AI end-to-end.",
+    link: "https://aiforindonesia.com",
+  },
+  {
+    slug: "dqlab",
+    name: "DQLab",
+    type: "institution",
+    position: 8,
+    tagline: "Platform belajar Data Science & AI online skala besar",
+    description:
+      "Platform pembelajaran data science online Indonesia dengan integrasi AI, menawarkan bootcamp live-class bersama mentor plus modul mandiri mencakup 100+ topik. Dimiliki Yayasan Multimedia Nusantara & Xeratic, dengan 500.000+ pengguna, 30+ mitra korporat, dan kemitraan sertifikasi BNSP.",
+    strengths: [
+      "Skala sangat besar: 500.000+ pengguna, 30+ mitra korporat",
+      "Kombinasi live-class + modul mandiri, dengan jalur sertifikasi BNSP",
+    ],
+    bestFor:
+      "Pemula hingga career-switcher yang ingin belajar Data Science & AI secara fleksibel (mandiri + live) dengan jalur sertifikasi.",
+    link: "https://dqlab.id",
+  },
 ]
 
 export const ALL_ENTRIES: Entry[] = [...INDIVIDUAL_ENTRIES, ...INSTITUTION_ENTRIES].sort(
