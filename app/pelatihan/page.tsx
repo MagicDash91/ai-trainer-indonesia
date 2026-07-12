@@ -40,6 +40,46 @@ const breadcrumbLd = {
   ],
 }
 
+const OUTCOMES: string[] = [
+  "Aplikasi LLM/RAG yang berfungsi — dibangun sendiri oleh peserta selama pelatihan.",
+  "Pemahaman arsitektur AI end-to-end, dari data dan model hingga deployment.",
+  "Kemampuan menembus di balik tool no-code: integrasi API, keamanan data, dan LLMOps.",
+  "Kode dasar yang bisa langsung dikembangkan tim setelah pelatihan selesai.",
+]
+
+const PAGE_FAQ: { q: string; a: string }[] = [
+  {
+    q: "Apakah pelatihan bisa online atau harus on-site?",
+    a: "Keduanya. Pelatihan tersedia on-site — terutama di Semarang dan Jawa Tengah — maupun online untuk tim dan peserta di seluruh Indonesia.",
+  },
+  {
+    q: "Apakah untuk pemula atau yang sudah bisa coding?",
+    a: "Keduanya bisa. Ada jalur fondasi AI/ML untuk pemula dan career-switcher, serta program lanjutan (RAG, Agentic AI, fine-tuning, LLMOps) untuk engineer dan tim teknis. Materi disesuaikan dengan level peserta.",
+  },
+  {
+    q: "Apakah materi dikustomisasi sesuai kebutuhan tim?",
+    a: "Ya. Untuk pelatihan korporat, materi dan studi kasus disesuaikan dengan industri, use case, dan konteks tim Anda — tanpa menggunakan data sensitif perusahaan.",
+  },
+  {
+    q: "Apa yang peserta bawa pulang setelah pelatihan?",
+    a: "Setiap sesi bersifat build-along, sehingga peserta pulang membawa aplikasi AI yang mereka bangun sendiri, pemahaman arsitektur end-to-end, dan kode dasar yang bisa dikembangkan.",
+  },
+  {
+    q: "Bahasa apa yang digunakan dalam pelatihan?",
+    a: "Bilingual — bahasa Indonesia maupun Inggris, disesuaikan dengan preferensi tim atau peserta.",
+  },
+]
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: PAGE_FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+}
+
 export default function Pelatihan() {
   return (
     <div className="max-w-[860px] mx-auto px-6 py-12">
@@ -50,6 +90,10 @@ export default function Pelatihan() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
 
       <section>
@@ -65,6 +109,31 @@ export default function Pelatihan() {
           peserta pulang membawa aplikasi AI yang mereka bangun sendiri, dalam bahasa Indonesia
           maupun Inggris, untuk tim korporat maupun individu.
         </p>
+      </section>
+
+      <section className="mt-6 text-sm text-[var(--muted)] border-y border-[var(--border)] py-4">
+        <span className="font-semibold text-[var(--foreground)]">Dipercaya untuk melatih:</span>{" "}
+        pelatihan Agentic AI untuk <strong>Bank Jateng</strong> · pengajar bootcamp di{" "}
+        <strong>INTELLIGO.ID</strong>, <strong>DIBIMBING.ID</strong>, dan <strong>DSAREA</strong> ·
+        pembicara di acara <strong>Google Developer Group</strong>.
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-2xl font-bold">Pendekatan: end-to-end, bukan permukaan</h2>
+        <p className="mt-3 leading-relaxed text-[var(--muted)]">
+          Pelatihan ini membawa peserta menempuh alur LLM yang utuh — dari dasar Generative AI
+          hingga menjalankannya di produksi. Fokusnya implementasi sungguhan: arsitektur,
+          integrasi API, keamanan data, dan cara men-deploy — bukan sekadar menyambungkan node di
+          tool siap-pakai. Hasilnya, peserta pulang mampu membangun sistemnya sendiri, bukan hanya
+          menjalankan tool buatan orang lain.
+        </p>
+        <ul className="mt-4 space-y-2 list-disc list-inside text-[var(--muted)]">
+          <li>Dasar Generative AI &amp; Large Language Models (LLM)</li>
+          <li>RAG (Retrieval-Augmented Generation) — dari dasar hingga Agentic/Hybrid/Adaptive RAG</li>
+          <li>AI Agents &amp; Agentic AI — multi-agent, tool execution, dan memory</li>
+          <li>Fine-tuning LLM untuk kebutuhan spesifik</li>
+          <li>LLMOps &amp; deployment ke sistem produksi</li>
+        </ul>
       </section>
 
       <section className="mt-10 space-y-6">
@@ -123,6 +192,31 @@ export default function Pelatihan() {
       </section>
 
       <section className="mt-14">
+        <h2 className="text-2xl font-bold">Hasil yang Anda dapat</h2>
+        <p className="mt-2 text-[var(--muted)]">
+          Pelatihan diukur dari apa yang bisa peserta lakukan setelahnya, bukan sekadar materi yang
+          disampaikan.
+        </p>
+        <ul className="mt-4 space-y-2 list-disc list-inside text-[var(--muted)]">
+          {OUTCOMES.map((o) => (
+            <li key={o}>{o}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-14">
+        <h2 className="text-2xl font-bold">Pertanyaan yang sering diajukan</h2>
+        <div className="mt-5 space-y-5">
+          {PAGE_FAQ.map((f) => (
+            <div key={f.q}>
+              <h3 className="font-bold">{f.q}</h3>
+              <p className="mt-1 text-[var(--muted)] leading-relaxed">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-14">
         <p className="text-sm">
           <Link href="/trainer/michael-wiryaseputra">
             Lihat profil &amp; kredensial lengkap trainer →
@@ -137,6 +231,29 @@ export default function Pelatihan() {
         <h2 className="text-xl font-bold">Diskusikan kebutuhan pelatihan tim Anda</h2>
         <p className="mt-2 text-[var(--muted)]">
           Setiap program dikustomisasi sesuai use case dan industri Anda.
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <div className="rounded-lg border border-[var(--border)] p-4">
+            <p className="font-bold text-sm">Pelatihan korporat</p>
+            <p className="mt-1 text-sm text-[var(--muted)]">
+              Dikustomisasi sesuai industri, use case, dan jumlah peserta — termasuk materi dan
+              pendampingan. Hubungi untuk penawaran.
+            </p>
+          </div>
+          <div className="rounded-lg border border-[var(--border)] p-4">
+            <p className="font-bold text-sm">Kelas privat / individual</p>
+            <p className="mt-1 text-sm text-[var(--muted)]">
+              Pelatihan end-to-end LLM — Generative AI, RAG, AI Agents, Agentic AI, hingga
+              fine-tuning — mulai dari Rp 2 juta/hari, dapat dinego.
+            </p>
+          </div>
+        </div>
+        <p className="mt-4 text-sm text-[var(--muted)]">
+          <span className="font-semibold text-[var(--foreground)]">
+            Untuk agensi, vendor pelatihan &amp; event organizer:
+          </span>{" "}
+          terbuka untuk kerja sama menghubungkan pelatihan ini dengan klien korporat Anda, dengan
+          skema komersial yang fleksibel sesuai kesepakatan.
         </p>
         <a
           href={MICHAEL_URL}
