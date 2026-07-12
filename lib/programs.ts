@@ -11,6 +11,57 @@ export type Program = {
   topics: string[]
 }
 
+export type Tool = { name: string; logo: string }
+export type ToolCategory = { category: string; note: string; tools: Tool[] }
+
+// Tools genuinely taught/used in Michael's sessions. Logos stored locally in /public/tools.
+export const TOOL_CATEGORIES: ToolCategory[] = [
+  {
+    category: "Orkestrasi & Agentic AI",
+    note: "Membangun workflow multi-agent dan aplikasi LLM",
+    tools: [
+      { name: "LangChain", logo: "/tools/langchain.png" },
+      { name: "LangGraph", logo: "/tools/langgraph.png" },
+      { name: "CrewAI", logo: "/tools/crewai.jpg" },
+    ],
+  },
+  {
+    category: "Fine-tuning",
+    note: "Menyesuaikan model untuk kebutuhan spesifik",
+    tools: [{ name: "Unsloth", logo: "/tools/unsloth.png" }],
+  },
+  {
+    category: "Observability & LLMOps",
+    note: "Memantau, mengevaluasi, dan mengoperasikan LLM",
+    tools: [{ name: "LangSmith", logo: "/tools/langsmith.png" }],
+  },
+  {
+    category: "LLM Providers",
+    note: "Model bahasa dari berbagai penyedia",
+    tools: [
+      { name: "Google Gemini", logo: "/tools/googlegemini.svg" },
+      { name: "OpenAI", logo: "/tools/openai.svg" },
+      { name: "Claude (Anthropic)", logo: "/tools/anthropic.svg" },
+    ],
+  },
+  {
+    category: "RAG & Vector Database",
+    note: "Menyimpan dan mencari konteks untuk retrieval",
+    tools: [
+      { name: "FAISS", logo: "/tools/faiss.jpg" },
+      { name: "ChromaDB", logo: "/tools/chroma.png" },
+    ],
+  },
+  {
+    category: "Backend & Bahasa",
+    note: "Fondasi membangun dan men-deploy aplikasi AI",
+    tools: [
+      { name: "Python", logo: "/tools/python.svg" },
+      { name: "FastAPI", logo: "/tools/fastapi.svg" },
+    ],
+  },
+]
+
 export const PROGRAMS: Program[] = [
   {
     slug: "agentic-ai-korporat",

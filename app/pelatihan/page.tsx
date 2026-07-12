@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { PROGRAMS } from "@/lib/programs"
+import { PROGRAMS, TOOL_CATEGORIES } from "@/lib/programs"
 
 const SITE_URL = "https://aitrainerindonesia.id"
 const MICHAEL_URL = "https://michaelwiryaseputra.com"
@@ -89,7 +89,40 @@ export default function Pelatihan() {
         ))}
       </section>
 
-      <section className="mt-10">
+      <section className="mt-14">
+        <h2 className="text-2xl font-bold">Tools &amp; teknologi yang diajarkan</h2>
+        <p className="mt-2 text-[var(--muted)]">
+          Peserta belajar stack engineering yang benar-benar dipakai di produksi — bukan hanya
+          tool no-code — dari orkestrasi agentic hingga fine-tuning dan LLMOps.
+        </p>
+        <div className="mt-6 space-y-6">
+          {TOOL_CATEGORIES.map((cat) => (
+            <div key={cat.category}>
+              <h3 className="font-bold text-sm">{cat.category}</h3>
+              <p className="text-xs text-[var(--muted)] mb-3">{cat.note}</p>
+              <div className="flex flex-wrap gap-2.5">
+                {cat.tools.map((t) => (
+                  <span
+                    key={t.name}
+                    className="inline-flex items-center gap-2 border border-[var(--border)] bg-[var(--surface)] rounded-lg px-3 py-2"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={t.logo}
+                      alt={`Logo ${t.name}`}
+                      loading="lazy"
+                      className="h-5 w-auto object-contain"
+                    />
+                    <span className="text-sm font-medium">{t.name}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-14">
         <p className="text-sm">
           <Link href="/trainer/michael-wiryaseputra">
             Lihat profil &amp; kredensial lengkap trainer →
