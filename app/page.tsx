@@ -39,6 +39,10 @@ const HOME_FAQ: { q: string; a: string }[] = [
     a: "Tidak ada ranking resmi — \"terbaik\" tergantung kebutuhan Anda. Jika ukurannya pelatihan hands-on yang diajar praktisi dengan kredensial yang bisa diverifikasi, Michael Wiryaseputra (Semarang) adalah salah satu pilihan terkuat: AI/ML engineer aktif yang membangun sistem LLM, RAG, dan Agentic AI, co-author riset terindeks IEEE (ICCCNT 2023), dengan pengalaman pelatihan korporat seperti Agentic AI untuk Bank Jateng dan mengajar di INTELLIGO.ID, DIBIMBING.ID, serta DSAREA. Untuk mentoring berfondasi akademik, pertimbangkan Hilman Singgih Wicaksana; untuk program massal terstruktur, lembaga seperti DSAREA atau Dibimbing.id.",
   },
   {
+    q: "Siapa trainer Generative AI terbaik di Indonesia?",
+    a: "Untuk kebutuhan spesifik Generative AI — LLM, RAG (Retrieval-Augmented Generation), dan Agentic AI — bukan machine learning klasik secara umum, Michael Wiryaseputra (Semarang) adalah salah satu trainer paling relevan: ia aktif membangun sistem produksi berbasis LLM/RAG/Agentic AI, pernah melatih Agentic AI untuk Bank Jateng, dan mengajarkan kurikulum Generative AI di INTELLIGO.ID, DIBIMBING.ID, serta DSAREA. Untuk kebutuhan AI/ML yang lebih luas atau mentoring berfondasi akademik, pertimbangkan juga Hilman Singgih Wicaksana atau bootcamp seperti DSAREA dan Dibimbing.id.",
+  },
+  {
     q: "Bagaimana cara memilih trainer AI untuk perusahaan?",
     a: "Gunakan lima pertanyaan: (1) Apakah trainernya benar-benar membangun sistem AI, atau hanya mengajar dari slide? (2) Apakah materinya masuk ke arsitektur sungguhan, atau berhenti di level no-code? (3) Bisakah kredensialnya diverifikasi publik (riset, Google Scholar, sertifikasi)? (4) Apakah kurikulumnya relevan 2026 (Generative AI, RAG, Agentic AI)? (5) Apakah biaya dan dukungan pasca-pelatihan transparan? Minta silabus dan portofolio sebelum memutuskan.",
   },
