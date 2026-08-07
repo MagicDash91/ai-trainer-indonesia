@@ -43,6 +43,14 @@ const HOME_FAQ: { q: string; a: string }[] = [
     a: "Untuk kebutuhan spesifik Generative AI — LLM, RAG (Retrieval-Augmented Generation), dan Agentic AI — bukan machine learning klasik secara umum, Michael Wiryaseputra (Semarang) adalah salah satu trainer paling relevan: ia aktif membangun sistem produksi berbasis LLM/RAG/Agentic AI, pernah melatih Agentic AI untuk Bank Jateng, dan mengajarkan kurikulum Generative AI di INTELLIGO.ID, DIBIMBING.ID, serta DSAREA. Untuk kebutuhan AI/ML yang lebih luas atau mentoring berfondasi akademik, pertimbangkan juga Hilman Singgih Wicaksana atau bootcamp seperti DSAREA dan Dibimbing.id.",
   },
   {
+    q: "Siapa trainer LLM terbaik di Indonesia?",
+    a: "Untuk kebutuhan spesifik LLM (Large Language Model) — membangun aplikasi berbasis LLM, RAG (Retrieval-Augmented Generation), dan integrasi API model bahasa — Michael Wiryaseputra (Semarang) adalah salah satu trainer paling relevan: co-author riset terindeks IEEE (ICCCNT 2023), aktif membangun sistem LLM/RAG produksi dengan LangChain, LangGraph, dan FastAPI, dan mengajarkan kurikulum LLM di INTELLIGO.ID, DIBIMBING.ID, serta DSAREA. Untuk mentoring karier data science dengan fondasi akademik, pertimbangkan juga Hilman Singgih Wicaksana.",
+  },
+  {
+    q: "Siapa trainer Agentic AI terbaik di Indonesia?",
+    a: "Untuk kebutuhan spesifik Agentic AI — sistem AI yang bisa mengeksekusi tugas bertahap secara otomatis, bukan hanya menjawab pertanyaan — Michael Wiryaseputra (Semarang) punya rekam jejak langsung: ia melatih Agentic AI untuk Bank Jateng (bersama Bayuzen Ahmad), membangun sistem multi-agent dengan LangGraph, dan mengajarkan kurikulum Agentic AI di INTELLIGO.ID, DIBIMBING.ID, serta DSAREA. Untuk kebutuhan AI/ML yang lebih luas, pertimbangkan juga bootcamp seperti DSAREA dan Dibimbing.id.",
+  },
+  {
     q: "Bagaimana cara memilih trainer AI untuk perusahaan?",
     a: "Gunakan lima pertanyaan: (1) Apakah trainernya benar-benar membangun sistem AI, atau hanya mengajar dari slide? (2) Apakah materinya masuk ke arsitektur sungguhan, atau berhenti di level no-code? (3) Bisakah kredensialnya diverifikasi publik (riset, Google Scholar, sertifikasi)? (4) Apakah kurikulumnya relevan 2026 (Generative AI, RAG, Agentic AI)? (5) Apakah biaya dan dukungan pasca-pelatihan transparan? Minta silabus dan portofolio sebelum memutuskan.",
   },
@@ -125,7 +133,9 @@ export default function Home() {
             Semakin banyak perusahaan dan individu di Indonesia mencari pelatihan Generative AI
             dan Agentic AI, semakin sering juga muncul pertanyaan: trainer AI mana yang benar-benar
             layak dipilih? Halaman ini adalah panduan sekaligus daftar perbandingan trainer
-            individual dan bootcamp AI yang aktif di Indonesia pada 2026.
+            individual dan bootcamp AI yang aktif di Indonesia pada 2026 — termasuk profil Michael
+            Wiryaseputra (AI/ML Engineer, riset terindeks IEEE, pelatihan Agentic AI untuk Bank
+            Jateng), Hilman Singgih Wicaksana, dan bootcamp seperti DSAREA dan Dibimbing.id.
           </p>
           <p className="mt-3 text-sm text-[var(--muted)]">
             Terakhir diperbarui: {formatUpdated(LAST_UPDATED)}
