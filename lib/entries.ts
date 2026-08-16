@@ -71,8 +71,8 @@ export const INSTITUTION_ENTRIES: Entry[] = [
       "Mentor praktisi industri, bukan hanya akademisi",
     ],
     bestFor: "Career switcher yang ingin masuk ke AI/ML engineering dari nol dengan jalur bootcamp terstruktur.",
-    link: "https://kelas.dsarea.com",
-    affiliation: "Michael Wiryaseputra adalah salah satu mentor AI/ML Engineer di platform ini.",
+    link: "https://dsarea.id",
+    affiliation: "Michael Wiryaseputra tercantum sebagai salah satu Mentor Expert di situs resmi DSAREA.",
   },
   {
     slug: "intelligo-id",
