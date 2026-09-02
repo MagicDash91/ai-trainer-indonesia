@@ -30,6 +30,7 @@ export const INDIVIDUAL_ENTRIES: Entry[] = [
       "Riset terverifikasi: paper IEEE ICCCNT 2023, Google Scholar & ORCID publik",
       "Pelatihan korporat nyata — termasuk pelatihan Agentic AI untuk Bank Jateng",
       "Mengajar bilingual (Indonesia & Inggris), materi build-along end-to-end",
+      "Mentor program inovasi mahasiswa Samsung Solve for Tomorrow Indonesia 2026 (via Dibimbing.id)",
     ],
     bestFor:
       "Tim atau individu yang ingin membangun aplikasi LLM/RAG/Agentic AI secara hands-on, bukan sekadar menyambungkan tool no-code.",

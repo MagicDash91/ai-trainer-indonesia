@@ -190,6 +190,50 @@ export default async function TrainerPage({ params }: { params: Promise<{ slug: 
         </figure>
       </section>
 
+      {/* Mentoring */}
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold">Program mentoring</h2>
+        <div className="mt-5 space-y-4">
+          {t.mentoring.map((e) => (
+            <div key={e.org} className="entry-card">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="font-bold m-0">
+                  {e.role} — {e.org}
+                </h3>
+                <span className="text-sm text-[var(--muted)]">{e.date}</span>
+              </div>
+              <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">{e.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <figure>
+            <Image
+              src="/trainer/michael-samsung-solve-concept.jpg"
+              alt="Konsep aplikasi tim Supernova, dibimbing Michael Wiryaseputra di Samsung Solve for Tomorrow 2026"
+              width={860}
+              height={399}
+              className="rounded-xl border border-[var(--border)] w-full h-auto"
+            />
+            <figcaption className="mt-2 text-xs text-[var(--muted)] text-center">
+              Concept paper tim Supernova, sesi mentoring 1 (Agustus 2026).
+            </figcaption>
+          </figure>
+          <figure>
+            <Image
+              src="/trainer/michael-samsung-solve-chat.jpg"
+              alt="Rekomendasi model LLM kecil dari Michael Wiryaseputra untuk tim Samsung Solve for Tomorrow"
+              width={320}
+              height={742}
+              className="rounded-xl border border-[var(--border)] w-full h-auto"
+            />
+            <figcaption className="mt-2 text-xs text-[var(--muted)] text-center">
+              Arahan teknis pemilihan model LLM kecil untuk tim mentee.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* Teaching */}
       <section className="mt-12">
         <h2 className="text-2xl font-bold">Pengalaman mengajar bootcamp</h2>

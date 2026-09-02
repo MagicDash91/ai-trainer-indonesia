@@ -55,6 +55,7 @@ export type TrainerDetail = {
   summary: string
   credentials: Credential[]
   corporateTraining: TrainingEngagement[]
+  mentoring: TrainingEngagement[]
   teaching: TrainingEngagement[]
   speaking: SpeakingEngagement[]
   expertise: string[]
@@ -116,6 +117,14 @@ export const TRAINER_DETAILS: Record<string, TrainerDetail> = {
         desc: "Memimpin pelatihan lanjutan pembangunan sistem Agentic AI dengan LangChain, LangGraph, dan Gemini/OpenAI — mencakup koordinasi multi-agent, RAG pipeline, tool execution, modul memory, dan praktik LLMOps.",
       },
     ],
+    mentoring: [
+      {
+        role: "AI Mentor",
+        org: "Samsung Solve for Tomorrow Indonesia 2026 (via Dibimbing.id)",
+        date: "Agustus 2026 – sekarang",
+        desc: "Membimbing tim mahasiswa (Supernova) membangun aplikasi pendamping belajar berbasis AI, termasuk mengevaluasi model LLM kecil/edge (Qwen2.5-0.5B-Instruct, LFM2.5-350M, Gemma 3 270M-IT) untuk penggunaan on-device serta memberi arahan strategi fine-tuning vs. berganti model.",
+      },
+    ],
     teaching: [
       {
         role: "AI/ML Bootcamp Tutor",
@@ -171,6 +180,15 @@ export const TRAINER_DETAILS: Record<string, TrainerDetail> = {
         topics: ["Basic SQL"],
         poster: "/trainer/michael-kei-sql.jpeg",
         href: "https://www.instagram.com/p/DUmlo-AE1P3/",
+      },
+      {
+        event: "Menyusun Strategi Personal Brand: Brainstorming dengan AI",
+        organizer: "ASSAI",
+        venue: "Online",
+        date: "9 September 2026",
+        topics: ["Personal Branding", "Generative AI"],
+        poster: "/trainer/michael-assai-webinar.png",
+        href: "https://www.instagram.com/p/DclkntsviF5/",
       },
     ],
     expertise: [
