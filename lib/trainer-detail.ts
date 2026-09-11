@@ -138,6 +138,7 @@ export const TRAINER_DETAILS: Record<string, TrainerDetail> = {
         org: "DIBIMBING.ID",
         date: "Desember 2025 – sekarang",
         desc: "Mengajar kelas reguler dengan kurikulum Data Science dan AI/ML menyeluruh: Machine Learning, NLP, LLM, RAG, LLMOps, dan visualisasi data.",
+        href: "https://dibimbing.id/layanan/bootcamp/data-science",
       },
       {
         role: "AI/ML & Data Engineer Bootcamp Tutor",
