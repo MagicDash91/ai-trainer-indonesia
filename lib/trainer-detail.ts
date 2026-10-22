@@ -127,6 +127,12 @@ export const TRAINER_DETAILS: Record<string, TrainerDetail> = {
     ],
     teaching: [
       {
+        role: "AI Web Programming Tutor",
+        org: "Ioda Academy",
+        date: "September 2026 – Oktober 2026",
+        desc: "Mengajar dan membimbing peserta bootcamp hybrid membuat web app dengan bantuan AI — sesi online dan kelas tatap muka di Semarang, Jawa Tengah — mencakup praktik kelas, mentoring satu-satu, dan umpan balik proyek.",
+      },
+      {
         role: "AI/ML Bootcamp Tutor",
         org: "INTELLIGO.ID",
         date: "Mei 2025 – sekarang",
@@ -190,6 +196,15 @@ export const TRAINER_DETAILS: Record<string, TrainerDetail> = {
         topics: ["Personal Branding", "Generative AI"],
         poster: "/trainer/michael-assai-webinar.png",
         href: "https://www.instagram.com/p/DclkntsviF5/",
+      },
+      {
+        event: "Behind Mandalika MotoGP 2026: Tech, Cyber & Digital Life in Lombok",
+        organizer: "WTS Cyber Community Talk",
+        venue: "Online (Zoom)",
+        date: "17 Oktober 2026",
+        topics: ["AI, CCTV & Computer Vision", "Teknologi di Balik Event Besar"],
+        poster: "/trainer/michael-wts-mandalika.jpeg",
+        href: "https://www.instagram.com/p/Dei9qzUmq9l/",
       },
     ],
     expertise: [
