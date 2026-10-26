@@ -116,6 +116,13 @@ export const TRAINER_DETAILS: Record<string, TrainerDetail> = {
         date: "September 2025",
         desc: "Memimpin pelatihan lanjutan pembangunan sistem Agentic AI dengan LangChain, LangGraph, dan Gemini/OpenAI — mencakup koordinasi multi-agent, RAG pipeline, tool execution, modul memory, dan praktik LLMOps.",
       },
+      {
+        role: "Narasumber — Introduction to AI",
+        org: "Telkom Semarang × Diskominfo Kabupaten Tegal",
+        date: "Oktober 2026",
+        desc: "Mengisi sesi pengenalan AI untuk Telkom Semarang dan Diskominfo Kabupaten Tegal, Jawa Tengah: memakai Generative AI seperti Claude untuk membuat aplikasi dengan bantuan AI (vibe coding) dan ChatGPT untuk membuat poster serta laporan, menyusun prompt yang terstruktur, dan data pribadi/sensitif apa saja yang tidak boleh dikirim ke AI.",
+        href: "https://michaelwiryaseputra.com/blog/pelatihan-ai-diskominfo-tegal-telkom-semarang",
+      },
     ],
     mentoring: [
       {

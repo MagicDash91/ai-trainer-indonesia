@@ -168,7 +168,14 @@ export default async function TrainerPage({ params }: { params: Promise<{ slug: 
             <div key={e.org} className="entry-card">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="font-bold m-0">
-                  {e.role} — {e.org}
+                  {e.role} —{" "}
+                  {e.href ? (
+                    <a href={e.href} target="_blank" rel="noopener noreferrer">
+                      {e.org}
+                    </a>
+                  ) : (
+                    e.org
+                  )}
                 </h3>
                 <span className="text-sm text-[var(--muted)]">{e.date}</span>
               </div>
@@ -188,6 +195,32 @@ export default async function TrainerPage({ params }: { params: Promise<{ slug: 
             Pelatihan Agentic AI untuk Bank Jateng (September 2025).
           </figcaption>
         </figure>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <figure>
+            <Image
+              src="/trainer/michael-telkom-tegal-session.jpg"
+              alt="Michael Wiryaseputra membawakan sesi Introduction to AI untuk Diskominfo Kabupaten Tegal di Telkom Semarang"
+              width={1280}
+              height={960}
+              className="rounded-xl border border-[var(--border)] w-full h-auto"
+            />
+            <figcaption className="mt-2 text-xs text-[var(--muted)] text-center">
+              Sesi Introduction to AI, Telkom Semarang × Diskominfo Kabupaten Tegal (Oktober 2026).
+            </figcaption>
+          </figure>
+          <figure>
+            <Image
+              src="/trainer/michael-telkom-tegal-group.jpg"
+              alt="Foto bersama Michael Wiryaseputra dengan peserta Telkom Semarang dan Diskominfo Kabupaten Tegal"
+              width={1280}
+              height={960}
+              className="rounded-xl border border-[var(--border)] w-full h-auto"
+            />
+            <figcaption className="mt-2 text-xs text-[var(--muted)] text-center">
+              Foto bersama peserta di kantor Telkom Regional III, Semarang.
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       {/* Mentoring */}
