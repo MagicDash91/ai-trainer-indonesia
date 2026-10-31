@@ -213,6 +213,15 @@ export const TRAINER_DETAILS: Record<string, TrainerDetail> = {
         poster: "/trainer/michael-wts-mandalika.jpeg",
         href: "https://www.instagram.com/p/Dei9qzUmq9l/",
       },
+      {
+        event: "Tech Corner — Beyond Basic RAG: Building Smart AI Agents",
+        organizer: "Jagoan Hosting",
+        venue: "Online (Zoom)",
+        date: "31 Oktober 2026",
+        topics: ["Agentic AI", "Membangun AI Agent"],
+        poster: "/trainer/michael-jagoanhosting-rag.png",
+        href: "https://www.instagram.com/p/De8zw4XCHSO/",
+      },
     ],
     expertise: [
       "Generative AI",
